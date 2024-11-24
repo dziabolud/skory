@@ -1,6 +1,14 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Ustawienie elementów w kolumnie */
     font-family: Arial, sans-serif;
-    margin: 20px;
+    height: 100vh; /* Wysokość całego okna przeglądarki */
+    width: 100%; /* Szerokość całego okna */
+    margin: 0; /* Usuń marginesy */
+    gap: 16px;
+    box-sizing: border-box; /* Ustaw poprawne liczenie wymiarów */
 }
 
 label {
@@ -9,6 +17,14 @@ label {
 }
 
 #result {
-    margin-top: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+#result {
     font-weight: bold;
 }
