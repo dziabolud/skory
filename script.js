@@ -34,17 +34,23 @@ document.addEventListener('DOMContentLoaded', loadOptions);
 const select1 = document.getElementById('select1');
 const select2 = document.getElementById('select2');
 const output = document.getElementById('output');
+const quantityInput = document.getElementById('quantity');
 
 function updateResult() {
-    const value1 = select1.value;
-    const value2 = select2.value;
+    const value1 = select1.value;  // Cena z selecta 1
+    const value2 = select2.value;  // Wartość współczynnika z selecta 2
+    const quantity = quantityInput.value; // Ilość
 
-    if (value1 && value2) {
-        output.textContent = `Wybrano: ${value1} i ${value2}`;
+    if (value1 && value2 && quantity) {
+        // Obliczanie ceny: cena * współczynnik * ilość
+        const price = parseFloat(value1) * parseFloat(value2) * parseInt(quantity);
+        output.textContent = `${price} $`;  // Wyświetlanie ceny z dwoma miejscami po przecinku
     } else {
         output.textContent = "Brak danych";
     }
 }
 
+// Nasłuchiwanie na zmiany w selectach oraz polu ilości
 select1.addEventListener('change', updateResult);
 select2.addEventListener('change', updateResult);
+quantityInput.addEventListener('input', updateResult); // Monitorowanie zmiany ilości

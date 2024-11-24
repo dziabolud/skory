@@ -1,30 +1,77 @@
 body {
+    background-color: #202020;
+    font-size: 48px;
+    color: orange;
+    
+}
+
+#row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row; /* Ustawienie elementów w kolumnie */
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center;    /* Wyśrodkowanie pionowe */
+    flex-direction: row;    /* Ustawienie elementów w pionie */
+    gap: 16px;              /* Odstęp między elementami */
     font-family: Arial, sans-serif;
-    height: 100vh; /* Wysokość całego okna przeglądarki */
-    width: 100%; /* Szerokość całego okna */
-    margin: 0; /* Usuń marginesy */
-    gap: 16px;
-    box-sizing: border-box; /* Ustaw poprawne liczenie wymiarów */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 label {
-    display: block;
-    margin: 10px 0;
-}
-
-#result {
     font-weight: bold;
+    outline: none;
 }
 
-label {
-    display: block;
-    margin: 10px 0;
+label:focus {
+    outline: none;
+}
+label::selection{
+        background: orange; /* Change the selection background to a yellow color */
+        color: black; /* Change the text color to black */
+}
+#result::selection{
+    background: orange; /* Change the selection background to a yellow color */
+    color: black; /* Change the text color to black */
+}
+#output::selection{
+    background: orange; /* Change the selection background to a yellow color */
+    color: black; /* Change the text color to black */
+}
+#quantity::selection{
+    background: orange; /* Change the selection background to a yellow color */
+    color: black; /* Change the text color to black */
 }
 
-#result {
-    font-weight: bold;
+select {
+    background-color: rgb(63, 41, 0);
+    padding: 8px;
+    border: solid 2px orange;
+    font-size: 32px;
+    border-radius: 5px;
+    color: orange;
+    appearance: none; /* Wyłączenie domyślnego wyglądu */
+    outline: none; /* Usuwamy obramowanie przy fokusie */
+    user-select: none;
+}
+input[type="number"] {
+    background-color: rgb(63, 41, 0);
+    font-size: 32px;
+    color: orange;
+    border: solid 2px orange;
+    border-radius: 5px;
+    padding: 0;
+    width: 64px;
+    text-align: center;
+    outline: none;
+    -moz-appearance: textfield;  /* Dla Firefox */
+    -webkit-appearance: none;    /* Dla Safari, Chrome, Edge */
+    appearance: none;            /* Dla nowoczesnych przeglądarek */
+}
+
+/* Dodatkowo: usunięcie strzałek w Webkit (Safari, Chrome) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

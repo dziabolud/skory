@@ -7,9 +7,20 @@
     <title>Dynamiczne listy</title>
 </head>
 <body>
-    <select id="select1"></select>
-    <select id="select2"></select>
-    <div id="result">Cena: <span id="output">Brak danych</span></div>
+    <div id="row">
+        <!-- Select 1 -->
+        <select id="select1"></select>
+
+        <!-- Select 2 -->
+        <select id="select2"></select>
+
+        <!-- Ilość -->
+        <label for="quantity">Ilość:</label>
+        <input type="number" id="quantity" value="1" min="1" />
+
+        <!-- Wynik -->
+        <div id="result">Cena: <span id="output">-</span></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
