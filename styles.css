@@ -60,7 +60,7 @@ input[type="number"] {
     color: orange;
     border: solid 2px orange;
     border-radius: 5px;
-    padding: 0;
+    padding: 8px;
     width: 64px;
     text-align: center;
     outline: none;
