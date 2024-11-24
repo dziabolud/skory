@@ -1,13 +1,13 @@
 {
     "select1": [
-        { "value": "50", "text": "Królik" },
-        { "value": "50", "text": "Kojot" },
-        { "value": "100", "text": "Dzik" },
-        { "value": "100", "text": "Jeleń" },
-        { "value": "250", "text": "Bizon" },
-        { "value": "250", "text": "Wilk" },
-        { "value": "600", "text": "Puma" },
-        { "value": "1550", "text": "Niedźwiedź" }
+        { "value": "50", "text": "Królik", "icon": "assets/Krolik.png" },
+        { "value": "50", "text": "Kojot", "icon": "assets/Kojot.png" },
+        { "value": "100", "text": "Dzik", "icon": "assets/Dzik.png" },
+        { "value": "100", "text": "Jeleń", "icon": "assets/Jelen.png" },
+        { "value": "250", "text": "Bizon", "icon": "assets/Bizon.png" },
+        { "value": "250", "text": "Wilk", "icon": "assets/Wilk.png" },
+        { "value": "600", "text": "Puma", "icon": "assets/Puma.png" },
+        { "value": "1550", "text": "Niedźwiedź", "icon": "assets/Niedzwiedz.png" }
     ],
     "select2": [
         { "value": "1", "text": "Słaba" },

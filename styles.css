@@ -45,10 +45,12 @@ label::selection{
 
 select {
     background-color: rgb(63, 41, 0);
-    padding: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
     border: solid 2px orange;
     font-size: 32px;
     border-radius: 5px;
+    width: fit-content;
     color: orange;
     appearance: none; /* Wyłączenie domyślnego wyglądu */
     outline: none; /* Usuwamy obramowanie przy fokusie */
@@ -68,10 +70,22 @@ input[type="number"] {
     -webkit-appearance: none;    /* Dla Safari, Chrome, Edge */
     appearance: none;            /* Dla nowoczesnych przeglądarek */
 }
+option:checked {
+    background: linear-gradient(lightblue, lightblue);
+  }
 
 /* Dodatkowo: usunięcie strzałek w Webkit (Safari, Chrome) */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+#icon {
+    width: 64px;
+    height: 64px;
+}
+/* Style dla klasy hidden */
+.hidden {
+    display: none;
 }
