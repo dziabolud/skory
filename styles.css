@@ -2,17 +2,31 @@ body {
     background-color: #202020;
     font-size: 48px;
     color: orange;
-    
-}
-
-#row {
     display: flex;
-    justify-content: center; /* Wyśrodkowanie poziome */
+    gap: 32px;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+#total-price-container{
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    color: orange;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+#row1 {
+    display: flex;
+    justify-content: left; /* Wyśrodkowanie poziome */
     align-items: center;    /* Wyśrodkowanie pionowe */
     flex-direction: row;    /* Ustawienie elementów w pionie */
     gap: 16px;              /* Odstęp między elementami */
     font-family: Arial, sans-serif;
-    height: 100vh;
+    height: auto;
     width: 100%;
     margin: 0;
     box-sizing: border-box;
@@ -45,6 +59,7 @@ label::selection{
 
 select {
     background-color: rgb(63, 41, 0);
+    height: 64px;
     padding: 8px 12px;
     cursor: pointer;
     border: solid 2px orange;
@@ -57,7 +72,7 @@ select {
     user-select: none;
 }
 input[type="number"] {
-    background-color: rgb(63, 41, 0);
+    background-color: #3f2900;
     font-size: 32px;
     color: orange;
     border: solid 2px orange;
@@ -82,10 +97,41 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 #icon {
-    width: 64px;
+    width: 60px;
+    height: 60px;
+    background-color: #3f2900;
+    border: solid 2px orange;
+    border-radius: 5px;
+}
+button{
     height: 64px;
+    width: 64px;
 }
-/* Style dla klasy hidden */
-.hidden {
-    display: none;
+button.add-row-button {
+    background-color: #003f03;
+    color: green;
+    padding: 8px 16px;
+    border: solid 2px green;
+    border-radius: 5px;
+    font-size: 32px;
+    cursor: pointer;
 }
+button.remove-row-button {
+    background-color: #3f0400;
+    color: red;
+    padding: 8px 16px;
+    border: solid 2px red;
+    border-radius: 5px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+button.add-row-button:hover {
+    background-color: green;
+    color: #003f03;
+}
+button.remove-row-button:hover {
+    background-color: red;
+    color: #3f0400;
+}
+

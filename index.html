@@ -7,22 +7,35 @@
     <title>Dynamiczne listy</title>
 </head>
 <body>
-    <div id="row">
-        <!-- Select 1 -->
-        <img id="icon" src=""class="hidden" />
-        <select id="select1"></select>
-    
-        <!-- Select 2 -->
-        <select id="select2"></select>
-    
-        <!-- Ilość -->
-        <label for="quantity">Ilość:</label>
-        <input type="number" id="quantity" value="1" min="1" />
-    
-        <!-- Wynik -->
-        <div id="result">Cena: <span id="output">-</span></div>
+    <div id="container">
+        <div class="row" id="row1">
+            <!-- Select 1 -->
+            <img id="icon" src=""/>
+            <select class="select1"></select>
+        
+            <!-- Select 2 -->
+            <select class="select2"></select>
+        
+            <!-- Ilość -->
+            <label for="quantity">Ilość:</label>
+            <input type="number" class="quantity" value="1" min="1" />
+        
+            <!-- Wynik -->
+            <div class="result">Cena: <span class="output">-</span></div>
+        
+            <!-- Przycisk do dodania kolejnego wiersza -->
+            <button class="add-row-button">+</button>
+
+            <!-- Przycisk do usuwania bieżącego wiersza -->
+            <button class="remove-row-button">-</button>
+        </div>
     </div>    
 
+    <!-- Dodana etykieta do podsumowania -->
+    <div id="total-price-container">
+        <label>Suma wszystkich cen: <span id="total-price">0 $</span></label>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
